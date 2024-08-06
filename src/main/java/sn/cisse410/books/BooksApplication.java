@@ -1,5 +1,6 @@
 package sn.cisse410.books;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BooksApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BooksApplication.class, args);
+		SpringApplication application = new SpringApplication(BooksApplication.class);
+		application.setBannerMode(Banner.Mode.OFF);
+		application.run(args);
+		// SpringApplication.run(BooksApplication.class, args);
 	}
 
 }
